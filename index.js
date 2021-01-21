@@ -69,7 +69,4 @@ rule1.hour = 9;
 rule1.minute = 0;
 rule1.dayOfWeek = [new schedule.Range(0, 6)];
 console.log('自动签到已启动..');
-schedule.scheduleJob(rule1, function(){
-  onSign();
-});
-// onSign();
+onSign();
