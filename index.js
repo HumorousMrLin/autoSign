@@ -53,7 +53,7 @@ const checkin = async (cfduid, key, uid, ip, expire_in) => {
     });
     const res = await data.json();
     if (res.ret === 1) {
-        // success
+        console.log("打卡成功")
     } else {
         // abnormal
     }
@@ -64,9 +64,5 @@ function getCookie(str, cookie) {
     return (cookie.match(`${str}=([^;]+)`) || [])[1]
 }
 
-var rule1 = new schedule.RecurrenceRule();
-rule1.hour = 9;
-rule1.minute = 0;
-rule1.dayOfWeek = [new schedule.Range(0, 6)];
 console.log('自动签到已启动..');
 onSign();
