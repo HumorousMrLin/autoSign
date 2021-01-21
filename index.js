@@ -55,7 +55,7 @@ const checkin = async (cfduid, key, uid, ip, expire_in) => {
     if (res.ret === 1) {
         console.log("打卡成功")
     } else {
-        // abnormal
+        console.log("未知错误")
     }
     console.log(JSON.stringify(res), '-', new Date().toString());
 };
