@@ -40,9 +40,9 @@ const login = async (uuid) => {
     const ip = getCookie('ip', cookie);
     const expire_in = getCookie('expire_in', cookie);
     const res = await data.json();
-
-    console.log(res.msg);
+    
     if (res.ret === 1) {
+        console.log(res.msg);
         await checkin(cfduid, key, uid, ip, expire_in);
     }
 
@@ -56,8 +56,8 @@ const checkin = async (cfduid, key, uid, ip, expire_in) => {
         }
     });
     const res = await data.json();
-    console.log(res.msg);
     if (res.ret === 1) {
+        console.log(res.msg);
         console.log("success");
     } else {
         console.log("false");
