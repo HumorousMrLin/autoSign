@@ -20,6 +20,7 @@ jobs:
       with:
         node-version: 15.x
     - run: npm ci
+    - run: npm i
     - run: npm install node-schedule
     - run: npm install node-fetch
     - run: node index.js
