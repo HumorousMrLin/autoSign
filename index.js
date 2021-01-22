@@ -12,7 +12,7 @@ const onSign = async () => {
         const { headers } = await fetch('https://paoluz.link/auth/login');
         const cookie = headers.get('set-cookie') || '';
         const cfduid = getCookie('__cfduid', cookie);
-        //console.log("cfduid" + cfduid);
+        console.log("cfduid" + cfduid);
         if (cfduid) {
             await login(cfduid);
         }
